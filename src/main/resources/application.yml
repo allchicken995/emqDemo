@@ -1,0 +1,44 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: demo
+
+  datasource:
+    driver_class_name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: 123456
+  #redis
+  redis:
+    database: 0
+    host: 172.29.14.106
+    port: 6379
+    password: 132456
+    timeout: 6000ms
+    jedis:
+      pool:
+        max-active: 1000
+        max-wait: -1ms
+        max-idle: 10
+        min-idle: 5
+
+# EMQ
+mqtt:
+  device:
+    url: tcp://10.211.55.7:1883
+    username: admin
+    password: public
+    client-id-prefix: DEVICE-SERVER
+    max-inflight: 1000
+    share:
+    queue:
+    check: false
+    expire: 3600
+  app:
+    url: tcp://10.211.55.7:1883
+    username: admin
+    password: public
+    client-id-prefix: APP-SERVER
+    max-inflight: 1000

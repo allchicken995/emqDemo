@@ -1,0 +1,735 @@
+10:55:33.086 INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.1.6.Final
+10:55:33.097 INFO  c.z.e.ZhtApplication - [logStarting,55] - Starting ZhtApplication using Java 1.8.0_261 on AllchickendeMacBook-Pro.local with PID 89379 (/Users/allchicken/IdeaProjects/emqdemo/target/classes started by allchicken in /Users/allchicken/IdeaProjects/emqdemo)
+10:55:33.098 INFO  c.z.e.ZhtApplication - [logStartupProfileInfo,660] - No active profile set, falling back to default profiles: default
+10:55:34.478 INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+10:55:34.479 INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+10:55:34.479 INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+10:55:34.560 INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+10:56:34.874 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - [refresh,596] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceEventProxy': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'uploadCabinetEvent': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventRespPublisher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'deviceMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/DeviceMqttConfig.class]: Unsatisfied dependency expressed through method 'mqttConnClient' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'connectedReceiver': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'connectedListener': Unsatisfied dependency expressed through field 'changePushService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'changePushService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'appMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/AppMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (0) - java.net.SocketTimeoutException: connect timed out
+10:56:34.879 INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+10:56:34.917 ERROR o.s.b.SpringApplication - [reportFailure,856] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceEventProxy': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'uploadCabinetEvent': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventRespPublisher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'deviceMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/DeviceMqttConfig.class]: Unsatisfied dependency expressed through method 'mqttConnClient' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'connectedReceiver': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'connectedListener': Unsatisfied dependency expressed through field 'changePushService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'changePushService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'appMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/AppMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (0) - java.net.SocketTimeoutException: connect timed out
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:923)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at com.zht.emqdemo.ZhtApplication.main(ZhtApplication.java:10)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'uploadCabinetEvent': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventRespPublisher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'deviceMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/DeviceMqttConfig.class]: Unsatisfied dependency expressed through method 'mqttConnClient' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'connectedReceiver': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'connectedListener': Unsatisfied dependency expressed through field 'changePushService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'changePushService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'appMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/AppMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (0) - java.net.SocketTimeoutException: connect timed out
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1585)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1549)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1438)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1325)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:521)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 18 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventRespPublisher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'deviceMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/DeviceMqttConfig.class]: Unsatisfied dependency expressed through method 'mqttConnClient' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'connectedReceiver': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'connectedListener': Unsatisfied dependency expressed through field 'changePushService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'changePushService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'appMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/AppMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (0) - java.net.SocketTimeoutException: connect timed out
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:468)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 37 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'deviceMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/DeviceMqttConfig.class]: Unsatisfied dependency expressed through method 'mqttConnClient' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'connectedReceiver': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'connectedListener': Unsatisfied dependency expressed through field 'changePushService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'changePushService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'appMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/AppMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (0) - java.net.SocketTimeoutException: connect timed out
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1179)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:468)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 51 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'connectedReceiver': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'connectedListener': Unsatisfied dependency expressed through field 'changePushService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'changePushService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'appMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/AppMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (0) - java.net.SocketTimeoutException: connect timed out
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1585)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1549)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1438)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1325)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 67 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'connectedListener': Unsatisfied dependency expressed through field 'changePushService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'changePushService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'appMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/AppMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (0) - java.net.SocketTimeoutException: connect timed out
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:468)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 82 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'changePushService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'appMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/AppMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (0) - java.net.SocketTimeoutException: connect timed out
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1367)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 98 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'appMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/AppMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (0) - java.net.SocketTimeoutException: connect timed out
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1179)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:468)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 109 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (0) - java.net.SocketTimeoutException: connect timed out
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 125 common frames omitted
+Caused by: org.eclipse.paho.client.mqttv3.MqttException: MqttException
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:38)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms$ConnectBG.run(ClientComms.java:736)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at org.eclipse.paho.client.mqttv3.internal.TCPNetworkModule.start(TCPNetworkModule.java:74)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms$ConnectBG.run(ClientComms.java:722)
+	... 1 common frames omitted
+10:58:52.039 INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.1.6.Final
+10:58:52.050 INFO  c.z.e.ZhtApplication - [logStarting,55] - Starting ZhtApplication using Java 1.8.0_261 on AllchickendeMacBook-Pro.local with PID 89411 (/Users/allchicken/IdeaProjects/emqdemo/target/classes started by allchicken in /Users/allchicken/IdeaProjects/emqdemo)
+10:58:52.051 INFO  c.z.e.ZhtApplication - [logStartupProfileInfo,660] - No active profile set, falling back to default profiles: default
+10:58:53.439 INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+10:58:53.440 INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+10:58:53.440 INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+10:58:53.505 INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+10:58:54.110 INFO  c.z.e.c.c.e.AppMqttConfig - [connectComplete,61] - APP服务端连接Broker连接成功, clientId: APP-SERVER:be2656a1-70c0-4458-855d-4ccd0ef0a3a8
+10:58:54.728 INFO  c.z.e.c.c.e.DeviceMqttConfig - [connectComplete,64] - Device服务端连接Broker连接成功, clientId: DEVICE-SERVER:02d06b4e-7043-4ea4-b9e3-6459d5b78260
+10:58:54.746 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - [refresh,596] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceEventProxy': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'uploadCabinetEvent': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventRespPublisher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/DeviceMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (128)
+10:58:54.769 WARN  o.s.b.f.s.DisposableBeanAdapter - [invokeCustomDestroyMethod,349] - Destroy method 'close' on bean with name 'appMqttClient' threw an exception: 已连接客户机 (32100)
+10:58:54.772 INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+10:58:54.817 ERROR o.s.b.SpringApplication - [reportFailure,856] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceEventProxy': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'uploadCabinetEvent': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventRespPublisher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/DeviceMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (128)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:923)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at com.zht.emqdemo.ZhtApplication.main(ZhtApplication.java:10)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'uploadCabinetEvent': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventRespPublisher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/DeviceMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (128)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1585)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1549)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1438)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1325)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:521)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 18 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventRespPublisher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/DeviceMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (128)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:468)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 37 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/DeviceMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (128)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1179)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:468)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 51 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (128)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 67 common frames omitted
+Caused by: org.eclipse.paho.client.mqttv3.MqttException: MqttException
+	at org.eclipse.paho.client.mqttv3.MqttClient.subscribe(MqttClient.java:466)
+	at org.eclipse.paho.client.mqttv3.MqttClient.subscribe(MqttClient.java:454)
+	at com.zht.emqdemo.common.config.emq.DeviceMqttConfig.start(DeviceMqttConfig.java:124)
+	at com.zht.emqdemo.common.config.emq.DeviceMqttConfig.mqttConnClient(DeviceMqttConfig.java:98)
+	at com.zht.emqdemo.common.config.emq.DeviceMqttConfig$$EnhancerBySpringCGLIB$$22131fa4.CGLIB$mqttConnClient$0(<generated>)
+	at com.zht.emqdemo.common.config.emq.DeviceMqttConfig$$EnhancerBySpringCGLIB$$22131fa4$$FastClassBySpringCGLIB$$c3fa2702.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.zht.emqdemo.common.config.emq.DeviceMqttConfig$$EnhancerBySpringCGLIB$$22131fa4.mqttConnClient(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 68 common frames omitted
+12:47:16.587 ERROR c.z.e.c.c.e.AppMqttConfig - [connectionLost,67] - APP服务端连接异常断开！
+org.eclipse.paho.client.mqttv3.MqttException: 已断开连接
+	at org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:190)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.SocketException: Operation timed out (Read failed)
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:224)
+	at java.io.DataInputStream.readByte(DataInputStream.java:265)
+	at org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:92)
+	at org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:137)
+	... 1 common frames omitted
+13:00:56.057 INFO  c.z.e.c.c.e.AppMqttConfig - [connectionLost,72] - APP服务端断开重连中...
+13:00:56.453 INFO  c.z.e.c.c.e.AppMqttConfig - [connectComplete,61] - APP服务端连接Broker连接成功, clientId: APP-SERVER:be2656a1-70c0-4458-855d-4ccd0ef0a3a8
+13:01:56.455 INFO  c.z.e.c.c.e.AppMqttConfig - [connectionLost,72] - APP服务端断开重连中...
+13:01:56.459 INFO  c.z.e.c.c.e.AppMqttConfig - [connectionLost,75] - APP服务端重连失败,一分钟后再次尝试
+13:01:56.460 INFO  c.z.e.c.c.e.AppMqttConfig - [connectionLost,78] - APP服务端重连成功
+13:14:59.088 INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.1.6.Final
+13:14:59.098 INFO  c.z.e.ZhtApplication - [logStarting,55] - Starting ZhtApplication using Java 1.8.0_261 on AllchickendeMacBook-Pro.local with PID 89859 (/Users/allchicken/IdeaProjects/emqdemo/target/classes started by allchicken in /Users/allchicken/IdeaProjects/emqdemo)
+13:14:59.098 INFO  c.z.e.ZhtApplication - [logStartupProfileInfo,660] - No active profile set, falling back to default profiles: default
+13:15:00.292 INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+13:15:00.293 INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+13:15:00.294 INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+13:15:00.356 INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+13:15:00.948 INFO  c.z.e.c.c.e.AppMqttConfig - [connectComplete,61] - APP服务端连接Broker连接成功, clientId: APP-SERVER:fd00ab14-0ad2-447f-99c7-2f3a50574030
+13:15:01.459 INFO  c.z.e.c.c.e.DeviceMqttConfig - [connectComplete,64] - Device服务端连接Broker连接成功, clientId: DEVICE-SERVER:5b5c5cd1-8148-4324-9500-05334aedef3c
+13:15:01.481 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - [refresh,596] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceEventProxy': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'uploadCabinetEvent': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventRespPublisher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/DeviceMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (128)
+13:15:01.493 WARN  o.s.b.f.s.DisposableBeanAdapter - [invokeCustomDestroyMethod,349] - Destroy method 'close' on bean with name 'appMqttClient' threw an exception: 已连接客户机 (32100)
+13:15:01.496 INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+13:15:01.519 ERROR o.s.b.SpringApplication - [reportFailure,856] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceEventProxy': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'uploadCabinetEvent': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventRespPublisher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/DeviceMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (128)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:923)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at com.zht.emqdemo.ZhtApplication.main(ZhtApplication.java:10)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'uploadCabinetEvent': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventRespPublisher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/DeviceMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (128)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1585)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1549)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1438)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1325)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:521)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 18 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventRespPublisher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/DeviceMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (128)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:468)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 37 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/DeviceMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (128)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1179)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:468)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 51 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (128)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 67 common frames omitted
+Caused by: org.eclipse.paho.client.mqttv3.MqttException: MqttException
+	at org.eclipse.paho.client.mqttv3.MqttClient.subscribe(MqttClient.java:466)
+	at org.eclipse.paho.client.mqttv3.MqttClient.subscribe(MqttClient.java:454)
+	at com.zht.emqdemo.common.config.emq.DeviceMqttConfig.start(DeviceMqttConfig.java:124)
+	at com.zht.emqdemo.common.config.emq.DeviceMqttConfig.mqttConnClient(DeviceMqttConfig.java:98)
+	at com.zht.emqdemo.common.config.emq.DeviceMqttConfig$$EnhancerBySpringCGLIB$$210953f3.CGLIB$mqttConnClient$0(<generated>)
+	at com.zht.emqdemo.common.config.emq.DeviceMqttConfig$$EnhancerBySpringCGLIB$$210953f3$$FastClassBySpringCGLIB$$8db4b2cb.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.zht.emqdemo.common.config.emq.DeviceMqttConfig$$EnhancerBySpringCGLIB$$210953f3.mqttConnClient(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 68 common frames omitted
+15:22:46.601 INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.1.6.Final
+15:22:46.619 INFO  c.z.e.ZhtApplication - [logStarting,55] - Starting ZhtApplication using Java 1.8.0_261 on AllchickendeMacBook-Pro.local with PID 90391 (/Users/allchicken/IdeaProjects/emqdemo/target/classes started by allchicken in /Users/allchicken/IdeaProjects/emqdemo)
+15:22:46.620 INFO  c.z.e.ZhtApplication - [logStartupProfileInfo,660] - No active profile set, falling back to default profiles: default
+15:22:47.819 INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+15:22:47.821 INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+15:22:47.821 INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+15:22:47.882 INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+15:22:48.485 INFO  c.z.e.c.c.e.AppMqttConfig - [connectComplete,61] - APP服务端连接Broker连接成功, clientId: APP-SERVER:13e2e920-68cc-434e-83ed-423b7e734db0
+15:22:49.001 INFO  c.z.e.c.c.e.DeviceMqttConfig - [connectComplete,64] - Device服务端连接Broker连接成功, clientId: DEVICE-SERVER:c30cbaaa-2cd4-4bdb-88f4-b8c34a31a44e
+15:22:49.016 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - [refresh,596] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceEventProxy': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'uploadCabinetEvent': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventRespPublisher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/DeviceMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (128)
+15:22:49.027 WARN  o.s.b.f.s.DisposableBeanAdapter - [invokeCustomDestroyMethod,349] - Destroy method 'close' on bean with name 'appMqttClient' threw an exception: 已连接客户机 (32100)
+15:22:49.029 INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+15:22:49.057 ERROR o.s.b.SpringApplication - [reportFailure,856] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceEventProxy': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'uploadCabinetEvent': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventRespPublisher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/DeviceMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (128)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:923)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at com.zht.emqdemo.ZhtApplication.main(ZhtApplication.java:10)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'uploadCabinetEvent': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventRespPublisher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/DeviceMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (128)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1585)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1549)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1438)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1325)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:521)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 18 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventRespPublisher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/DeviceMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (128)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:468)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 37 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/DeviceMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (128)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1179)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:468)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 51 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (128)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 67 common frames omitted
+Caused by: org.eclipse.paho.client.mqttv3.MqttException: MqttException
+	at org.eclipse.paho.client.mqttv3.MqttClient.subscribe(MqttClient.java:466)
+	at org.eclipse.paho.client.mqttv3.MqttClient.subscribe(MqttClient.java:454)
+	at com.zht.emqdemo.common.config.emq.DeviceMqttConfig.start(DeviceMqttConfig.java:124)
+	at com.zht.emqdemo.common.config.emq.DeviceMqttConfig.mqttConnClient(DeviceMqttConfig.java:98)
+	at com.zht.emqdemo.common.config.emq.DeviceMqttConfig$$EnhancerBySpringCGLIB$$22131fa4.CGLIB$mqttConnClient$0(<generated>)
+	at com.zht.emqdemo.common.config.emq.DeviceMqttConfig$$EnhancerBySpringCGLIB$$22131fa4$$FastClassBySpringCGLIB$$c3fa2702.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.zht.emqdemo.common.config.emq.DeviceMqttConfig$$EnhancerBySpringCGLIB$$22131fa4.mqttConnClient(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 68 common frames omitted
+16:55:00.909 INFO  c.z.e.ZhtApplication - [logStarting,55] - Starting ZhtApplication using Java 1.8.0_261 on AllchickendeMacBook-Pro.local with PID 90704 (/Users/allchicken/IdeaProjects/emqdemo/target/classes started by allchicken in /Users/allchicken/IdeaProjects/emqdemo)
+16:55:00.906 INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.1.6.Final
+16:55:00.910 INFO  c.z.e.ZhtApplication - [logStartupProfileInfo,660] - No active profile set, falling back to default profiles: default
+16:55:02.247 INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+16:55:02.248 INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+16:55:02.248 INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+16:55:02.298 INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+16:55:02.876 INFO  c.z.e.c.c.e.AppMqttConfig - [connectComplete,61] - APP服务端连接Broker连接成功, clientId: APP-SERVER:c62ecb7f-1ee7-4471-b9d0-9d7df2ffbc74
+16:55:03.391 INFO  c.z.e.c.c.e.DeviceMqttConfig - [connectComplete,64] - Device服务端连接Broker连接成功, clientId: DEVICE-SERVER:f0dae40f-4ede-484d-aa12-4a29bb5c5aff
+16:55:03.399 INFO  c.z.e.c.c.e.DeviceMqttConfig - [start,125] - 订阅主题成功：topic=$SYS/brokers/+/clients/+/+ ,Qos=0
+16:55:03.401 INFO  c.z.e.c.c.e.DeviceMqttConfig - [start,125] - 订阅主题成功：topic=+/common/event/+ ,Qos=0
+16:55:03.405 INFO  c.z.e.c.c.e.DeviceMqttConfig - [start,125] - 订阅主题成功：topic=+/common/service_response/+ ,Qos=0
+16:55:03.865 INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+16:55:03.898 INFO  c.z.e.ZhtApplication - [logStarted,61] - Started ZhtApplication in 3.38 seconds (JVM running for 4.218)
+16:58:45.981 WARN  o.s.b.f.s.DisposableBeanAdapter - [invokeCustomDestroyMethod,349] - Destroy method 'close' on bean with name 'deviceMqttClient' threw an exception: 已连接客户机 (32100)
+16:58:45.996 WARN  o.s.b.f.s.DisposableBeanAdapter - [invokeCustomDestroyMethod,349] - Destroy method 'close' on bean with name 'appMqttClient' threw an exception: 已连接客户机 (32100)
+16:58:50.426 INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.1.6.Final
+16:58:50.432 INFO  c.z.e.ZhtApplication - [logStarting,55] - Starting ZhtApplication using Java 1.8.0_261 on AllchickendeMacBook-Pro.local with PID 90727 (/Users/allchicken/IdeaProjects/emqdemo/target/classes started by allchicken in /Users/allchicken/IdeaProjects/emqdemo)
+16:58:50.434 INFO  c.z.e.ZhtApplication - [logStartupProfileInfo,660] - No active profile set, falling back to default profiles: default
+16:58:51.625 INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+16:58:51.626 INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+16:58:51.626 INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+16:58:51.685 INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+16:58:52.282 INFO  c.z.e.c.c.e.AppMqttConfig - [connectComplete,61] - APP服务端连接Broker连接成功, clientId: APP-SERVER:e1717d18-7d48-4e87-a9b1-883ec2f99688
+16:58:52.817 INFO  c.z.e.c.c.e.DeviceMqttConfig - [connectComplete,64] - Device服务端连接Broker连接成功, clientId: DEVICE-SERVER:392b0d68-3cf0-49f6-b61e-104079dde678
+16:58:52.848 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - [refresh,596] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceEventProxy': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'uploadCabinetEvent': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventRespPublisher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/DeviceMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (128)
+16:58:52.864 WARN  o.s.b.f.s.DisposableBeanAdapter - [invokeCustomDestroyMethod,349] - Destroy method 'close' on bean with name 'appMqttClient' threw an exception: 已连接客户机 (32100)
+16:58:52.867 INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+16:58:52.893 ERROR o.s.b.SpringApplication - [reportFailure,856] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceEventProxy': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'uploadCabinetEvent': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventRespPublisher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/DeviceMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (128)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:923)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at com.zht.emqdemo.ZhtApplication.main(ZhtApplication.java:10)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'uploadCabinetEvent': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventRespPublisher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/DeviceMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (128)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1585)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1549)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1438)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1325)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:521)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 18 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventRespPublisher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/DeviceMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (128)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:468)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 37 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'deviceMqttClient' defined in class path resource [com/zht/emqdemo/common/config/emq/DeviceMqttConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (128)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1179)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:468)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 51 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.eclipse.paho.client.mqttv3.MqttClient]: Factory method 'mqttConnClient' threw exception; nested exception is MqttException (128)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 67 common frames omitted
+Caused by: org.eclipse.paho.client.mqttv3.MqttException: MqttException
+	at org.eclipse.paho.client.mqttv3.MqttClient.subscribe(MqttClient.java:466)
+	at org.eclipse.paho.client.mqttv3.MqttClient.subscribe(MqttClient.java:454)
+	at com.zht.emqdemo.common.config.emq.DeviceMqttConfig.start(DeviceMqttConfig.java:124)
+	at com.zht.emqdemo.common.config.emq.DeviceMqttConfig.mqttConnClient(DeviceMqttConfig.java:98)
+	at com.zht.emqdemo.common.config.emq.DeviceMqttConfig$$EnhancerBySpringCGLIB$$c9cede45.CGLIB$mqttConnClient$0(<generated>)
+	at com.zht.emqdemo.common.config.emq.DeviceMqttConfig$$EnhancerBySpringCGLIB$$c9cede45$$FastClassBySpringCGLIB$$70896872.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.zht.emqdemo.common.config.emq.DeviceMqttConfig$$EnhancerBySpringCGLIB$$c9cede45.mqttConnClient(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 68 common frames omitted
+17:00:06.201 INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.1.6.Final
+17:00:06.206 INFO  c.z.e.ZhtApplication - [logStarting,55] - Starting ZhtApplication using Java 1.8.0_261 on AllchickendeMacBook-Pro.local with PID 90732 (/Users/allchicken/IdeaProjects/emqdemo/target/classes started by allchicken in /Users/allchicken/IdeaProjects/emqdemo)
+17:00:06.206 INFO  c.z.e.ZhtApplication - [logStartupProfileInfo,660] - No active profile set, falling back to default profiles: default
+17:00:07.447 INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+17:00:07.448 INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+17:00:07.448 INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+17:00:07.503 INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+17:00:08.079 INFO  c.z.e.c.c.e.AppMqttConfig - [connectComplete,61] - APP服务端连接Broker连接成功, clientId: APP-SERVER:5032085b-9b0c-4b1c-911e-3947a664dc93
+17:00:08.612 INFO  c.z.e.c.c.e.DeviceMqttConfig - [connectComplete,64] - Device服务端连接Broker连接成功, clientId: DEVICE-SERVER:29d618b3-b8b3-4db3-a449-21d597447fb8
+17:00:08.618 INFO  c.z.e.c.c.e.DeviceMqttConfig - [start,125] - 订阅主题成功：topic=$SYS/brokers/+/clients/+/+ ,Qos=0
+17:00:08.620 INFO  c.z.e.c.c.e.DeviceMqttConfig - [start,125] - 订阅主题成功：topic=+/common/event/+ ,Qos=0
+17:00:08.622 INFO  c.z.e.c.c.e.DeviceMqttConfig - [start,125] - 订阅主题成功：topic=+/common/service_response/+ ,Qos=0
+17:00:09.011 INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+17:00:09.042 INFO  c.z.e.ZhtApplication - [logStarted,61] - Started ZhtApplication in 3.18 seconds (JVM running for 3.973)
+17:07:45.292 WARN  o.s.b.f.s.DisposableBeanAdapter - [invokeCustomDestroyMethod,349] - Destroy method 'close' on bean with name 'deviceMqttClient' threw an exception: 已连接客户机 (32100)
+17:07:45.311 WARN  o.s.b.f.s.DisposableBeanAdapter - [invokeCustomDestroyMethod,349] - Destroy method 'close' on bean with name 'appMqttClient' threw an exception: 已连接客户机 (32100)
+17:07:49.602 INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.1.6.Final
+17:07:49.610 INFO  c.z.e.ZhtApplication - [logStarting,55] - Starting ZhtApplication using Java 1.8.0_261 on AllchickendeMacBook-Pro.local with PID 90770 (/Users/allchicken/IdeaProjects/emqdemo/target/classes started by allchicken in /Users/allchicken/IdeaProjects/emqdemo)
+17:07:49.611 INFO  c.z.e.ZhtApplication - [logStartupProfileInfo,660] - No active profile set, falling back to default profiles: default
+17:07:50.658 INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+17:07:50.659 INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+17:07:50.659 INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+17:07:50.709 INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+17:07:51.286 INFO  c.z.e.c.c.e.AppMqttConfig - [connectComplete,61] - APP服务端连接Broker连接成功, clientId: APP-SERVER:446a37df-1627-437b-8414-6dfb93654953
+17:07:51.794 INFO  c.z.e.c.c.e.DeviceMqttConfig - [connectComplete,64] - Device服务端连接Broker连接成功, clientId: DEVICE-SERVER:0f601f44-431d-46cd-9a17-06b1fc320ce9
+17:07:51.802 INFO  c.z.e.c.c.e.DeviceMqttConfig - [start,125] - 订阅主题成功：topic=/World ,Qos=0
+17:07:51.804 INFO  c.z.e.c.c.e.DeviceMqttConfig - [start,125] - 订阅主题成功：topic=/World ,Qos=0
+17:07:51.807 INFO  c.z.e.c.c.e.DeviceMqttConfig - [start,125] - 订阅主题成功：topic=/World ,Qos=0
+17:07:52.193 INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+17:07:52.229 INFO  c.z.e.ZhtApplication - [logStarted,61] - Started ZhtApplication in 3.005 seconds (JVM running for 4.024)
+17:08:15.299 WARN  o.s.b.f.s.DisposableBeanAdapter - [invokeCustomDestroyMethod,349] - Destroy method 'close' on bean with name 'deviceMqttClient' threw an exception: 已连接客户机 (32100)
+17:08:15.310 WARN  o.s.b.f.s.DisposableBeanAdapter - [invokeCustomDestroyMethod,349] - Destroy method 'close' on bean with name 'appMqttClient' threw an exception: 已连接客户机 (32100)
+17:08:19.031 INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.1.6.Final
+17:08:19.045 INFO  c.z.e.ZhtApplication - [logStarting,55] - Starting ZhtApplication using Java 1.8.0_261 on AllchickendeMacBook-Pro.local with PID 90773 (/Users/allchicken/IdeaProjects/emqdemo/target/classes started by allchicken in /Users/allchicken/IdeaProjects/emqdemo)
+17:08:19.047 INFO  c.z.e.ZhtApplication - [logStartupProfileInfo,660] - No active profile set, falling back to default profiles: default
+17:08:20.215 INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+17:08:20.216 INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+17:08:20.216 INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.41]
+17:08:20.272 INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+17:08:20.854 INFO  c.z.e.c.c.e.AppMqttConfig - [connectComplete,61] - APP服务端连接Broker连接成功, clientId: APP-SERVER:545d44ff-2645-4132-ac12-e868adf85e52
+17:08:21.368 INFO  c.z.e.c.c.e.DeviceMqttConfig - [connectComplete,64] - Device服务端连接Broker连接成功, clientId: DEVICE-SERVER:955047fa-9058-4b44-8e68-88e7c8c59fe6
+17:08:21.373 INFO  c.z.e.c.c.e.DeviceMqttConfig - [start,125] - 订阅主题成功：topic=/World ,Qos=0
+17:08:21.375 INFO  c.z.e.c.c.e.DeviceMqttConfig - [start,125] - 订阅主题成功：topic=/World ,Qos=0
+17:08:21.377 INFO  c.z.e.c.c.e.DeviceMqttConfig - [start,125] - 订阅主题成功：topic=/World ,Qos=0
+17:08:21.756 INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+17:08:21.790 INFO  c.z.e.ZhtApplication - [logStarted,61] - Started ZhtApplication in 3.141 seconds (JVM running for 3.919)
+17:08:31.083 INFO  c.z.e.m.r.c.ServiceResponseForwarder - [forward,51] - 设备控制响应处理开始: /World
+17:08:31.083 INFO  c.z.e.m.r.c.ServiceResponseForwarder - [forward,52] - 消息载荷: {
+  "msg": "Linux11"
+}
+17:08:31.229 ERROR c.z.e.m.r.c.ServiceResponseForwarder - [forward,68] - 控制响应消息载荷校验失败: 
+javax.validation.ValidationException: 响应码不能为空
+	at com.zht.emqdemo.common.util.ValidateUtil.validate(ValidateUtil.java:31)
+	at com.zht.emqdemo.mqtt.receiver.common.ServiceResponseForwarder.forward(ServiceResponseForwarder.java:66)
+	at com.zht.emqdemo.mqtt.receiver.ForwardReceiver.receive(ForwardReceiver.java:35)
+	at com.zht.emqdemo.mqtt.receiver.system.AbstractReceiver.messageArrived(AbstractReceiver.java:64)
+	at org.eclipse.paho.client.mqttv3.internal.CommsCallback.deliverMessage(CommsCallback.java:506)
+	at org.eclipse.paho.client.mqttv3.internal.CommsCallback.handleMessage(CommsCallback.java:417)
+	at org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:214)
+	at java.lang.Thread.run(Thread.java:748)
+17:30:53.116 WARN  o.s.b.f.s.DisposableBeanAdapter - [invokeCustomDestroyMethod,349] - Destroy method 'close' on bean with name 'deviceMqttClient' threw an exception: 已连接客户机 (32100)
+17:30:53.137 WARN  o.s.b.f.s.DisposableBeanAdapter - [invokeCustomDestroyMethod,349] - Destroy method 'close' on bean with name 'appMqttClient' threw an exception: 已连接客户机 (32100)
+17:39:56.008 ERROR c.z.e.c.c.e.AppMqttConfig - [connectionLost,67] - APP服务端连接异常断开！
+org.eclipse.paho.client.mqttv3.MqttException: 已断开连接
+	at org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:190)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.SocketException: Operation timed out (Read failed)
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:224)
+	at java.io.DataInputStream.readByte(DataInputStream.java:265)
+	at org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:92)
+	at org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:137)
+	... 1 common frames omitted
+18:13:58.164 INFO  c.z.e.c.c.e.AppMqttConfig - [connectionLost,72] - APP服务端断开重连中...
+18:13:58.203 INFO  c.z.e.c.c.e.AppMqttConfig - [connectionLost,75] - APP服务端重连失败,一分钟后再次尝试
+19:39:57.188 INFO  c.z.e.c.c.e.AppMqttConfig - [connectionLost,72] - APP服务端断开重连中...
+22:32:07.729 INFO  c.z.e.c.c.e.AppMqttConfig - [connectionLost,75] - APP服务端重连失败,一分钟后再次尝试
