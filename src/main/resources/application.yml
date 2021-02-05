@@ -27,7 +27,8 @@ spring:
 # EMQ
 mqtt:
   device:
-    url: tcp://10.211.55.7:1883
+#    url: tcp://10.211.55.7:1883
+    url: tcp://172.29.12.106:1883
     username: admin
     password: public
     client-id-prefix: DEVICE-SERVER
@@ -37,8 +38,14 @@ mqtt:
     check: false
     expire: 3600
   app:
-    url: tcp://10.211.55.7:1883
+#    url: tcp://10.211.55.7:1883
+    url: tcp://172.29.12.106:1883
     username: admin
     password: public
     client-id-prefix: APP-SERVER
     max-inflight: 1000
+
+# jwt配置
+jwt:
+  secret: jwt123456789 #加密密钥
+  expire: 86400 #秒

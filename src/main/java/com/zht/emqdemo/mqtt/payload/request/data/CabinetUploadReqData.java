@@ -7,6 +7,8 @@ import java.math.BigDecimal;
 @Data
 public class CabinetUploadReqData {
 
+    private String id;
+
     private Integer status;
 
     private Integer powerOne;
@@ -15,19 +17,25 @@ public class CabinetUploadReqData {
 
     private Integer powerThree;
 
-    private Integer powerFour;
-
     private BigDecimal temperatureOne;
 
     private BigDecimal temperatureTwo;
 
     private BigDecimal temperatureThree;
 
-    private BigDecimal temperatureFour;
-
     private Integer valueOne;
 
     private Integer valueTwo;
+
+    private BigDecimal valueThree;
+
+    private BigDecimal valueFour;
+
+    private String deviceName;
+
+    private String deviceKey;
+
+    private String tenantId;
 
     private Integer alarmValueOne;
 

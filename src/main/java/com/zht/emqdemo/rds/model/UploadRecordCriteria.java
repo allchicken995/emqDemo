@@ -446,66 +446,6 @@ public class UploadRecordCriteria {
             return (Criteria) this;
         }
 
-        public Criteria andPowerFourIsNull() {
-            addCriterion("power_four is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andPowerFourIsNotNull() {
-            addCriterion("power_four is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andPowerFourEqualTo(Integer value) {
-            addCriterion("power_four =", value, "powerFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andPowerFourNotEqualTo(Integer value) {
-            addCriterion("power_four <>", value, "powerFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andPowerFourGreaterThan(Integer value) {
-            addCriterion("power_four >", value, "powerFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andPowerFourGreaterThanOrEqualTo(Integer value) {
-            addCriterion("power_four >=", value, "powerFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andPowerFourLessThan(Integer value) {
-            addCriterion("power_four <", value, "powerFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andPowerFourLessThanOrEqualTo(Integer value) {
-            addCriterion("power_four <=", value, "powerFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andPowerFourIn(List<Integer> values) {
-            addCriterion("power_four in", values, "powerFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andPowerFourNotIn(List<Integer> values) {
-            addCriterion("power_four not in", values, "powerFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andPowerFourBetween(Integer value1, Integer value2) {
-            addCriterion("power_four between", value1, value2, "powerFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andPowerFourNotBetween(Integer value1, Integer value2) {
-            addCriterion("power_four not between", value1, value2, "powerFour");
-            return (Criteria) this;
-        }
-
         public Criteria andTemperatureOneIsNull() {
             addCriterion("temperature_one is null");
             return (Criteria) this;
@@ -686,66 +626,6 @@ public class UploadRecordCriteria {
             return (Criteria) this;
         }
 
-        public Criteria andTemperatureFourIsNull() {
-            addCriterion("temperature_four is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andTemperatureFourIsNotNull() {
-            addCriterion("temperature_four is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andTemperatureFourEqualTo(BigDecimal value) {
-            addCriterion("temperature_four =", value, "temperatureFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andTemperatureFourNotEqualTo(BigDecimal value) {
-            addCriterion("temperature_four <>", value, "temperatureFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andTemperatureFourGreaterThan(BigDecimal value) {
-            addCriterion("temperature_four >", value, "temperatureFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andTemperatureFourGreaterThanOrEqualTo(BigDecimal value) {
-            addCriterion("temperature_four >=", value, "temperatureFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andTemperatureFourLessThan(BigDecimal value) {
-            addCriterion("temperature_four <", value, "temperatureFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andTemperatureFourLessThanOrEqualTo(BigDecimal value) {
-            addCriterion("temperature_four <=", value, "temperatureFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andTemperatureFourIn(List<BigDecimal> values) {
-            addCriterion("temperature_four in", values, "temperatureFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andTemperatureFourNotIn(List<BigDecimal> values) {
-            addCriterion("temperature_four not in", values, "temperatureFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andTemperatureFourBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("temperature_four between", value1, value2, "temperatureFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andTemperatureFourNotBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("temperature_four not between", value1, value2, "temperatureFour");
-            return (Criteria) this;
-        }
-
         public Criteria andValueOneIsNull() {
             addCriterion("value_one is null");
             return (Criteria) this;
@@ -863,6 +743,126 @@ public class UploadRecordCriteria {
 
         public Criteria andValueTwoNotBetween(Integer value1, Integer value2) {
             addCriterion("value_two not between", value1, value2, "valueTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueThreeIsNull() {
+            addCriterion("value_three is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueThreeIsNotNull() {
+            addCriterion("value_three is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueThreeEqualTo(BigDecimal value) {
+            addCriterion("value_three =", value, "valueThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueThreeNotEqualTo(BigDecimal value) {
+            addCriterion("value_three <>", value, "valueThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueThreeGreaterThan(BigDecimal value) {
+            addCriterion("value_three >", value, "valueThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueThreeGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("value_three >=", value, "valueThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueThreeLessThan(BigDecimal value) {
+            addCriterion("value_three <", value, "valueThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueThreeLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("value_three <=", value, "valueThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueThreeIn(List<BigDecimal> values) {
+            addCriterion("value_three in", values, "valueThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueThreeNotIn(List<BigDecimal> values) {
+            addCriterion("value_three not in", values, "valueThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueThreeBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("value_three between", value1, value2, "valueThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueThreeNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("value_three not between", value1, value2, "valueThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueFourIsNull() {
+            addCriterion("value_four is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueFourIsNotNull() {
+            addCriterion("value_four is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueFourEqualTo(BigDecimal value) {
+            addCriterion("value_four =", value, "valueFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueFourNotEqualTo(BigDecimal value) {
+            addCriterion("value_four <>", value, "valueFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueFourGreaterThan(BigDecimal value) {
+            addCriterion("value_four >", value, "valueFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueFourGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("value_four >=", value, "valueFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueFourLessThan(BigDecimal value) {
+            addCriterion("value_four <", value, "valueFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueFourLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("value_four <=", value, "valueFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueFourIn(List<BigDecimal> values) {
+            addCriterion("value_four in", values, "valueFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueFourNotIn(List<BigDecimal> values) {
+            addCriterion("value_four not in", values, "valueFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueFourBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("value_four between", value1, value2, "valueFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueFourNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("value_four not between", value1, value2, "valueFour");
             return (Criteria) this;
         }
 

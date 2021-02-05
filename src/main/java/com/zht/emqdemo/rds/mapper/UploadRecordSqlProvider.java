@@ -44,10 +44,6 @@ public class UploadRecordSqlProvider {
     public String insertSelective(UploadRecord record) {
         SQL sql = new SQL();
         sql.INSERT_INTO("upload_record");
-
-        if (record.getId() != null) {
-            sql.VALUES("id", "#{id,jdbcType=VARCHAR}");
-        }
         
         if (record.getPowerOne() != null) {
             sql.VALUES("power_one", "#{powerOne,jdbcType=INTEGER}");
@@ -59,10 +55,6 @@ public class UploadRecordSqlProvider {
         
         if (record.getPowerThree() != null) {
             sql.VALUES("power_three", "#{powerThree,jdbcType=INTEGER}");
-        }
-        
-        if (record.getPowerFour() != null) {
-            sql.VALUES("power_four", "#{powerFour,jdbcType=INTEGER}");
         }
         
         if (record.getTemperatureOne() != null) {
@@ -77,16 +69,20 @@ public class UploadRecordSqlProvider {
             sql.VALUES("temperature_three", "#{temperatureThree,jdbcType=DECIMAL}");
         }
         
-        if (record.getTemperatureFour() != null) {
-            sql.VALUES("temperature_four", "#{temperatureFour,jdbcType=DECIMAL}");
-        }
-        
         if (record.getValueOne() != null) {
             sql.VALUES("value_one", "#{valueOne,jdbcType=INTEGER}");
         }
         
         if (record.getValueTwo() != null) {
             sql.VALUES("value_two", "#{valueTwo,jdbcType=INTEGER}");
+        }
+        
+        if (record.getValueThree() != null) {
+            sql.VALUES("value_three", "#{valueThree,jdbcType=DECIMAL}");
+        }
+        
+        if (record.getValueFour() != null) {
+            sql.VALUES("value_four", "#{valueFour,jdbcType=DECIMAL}");
         }
         
         if (record.getUploadDate() != null) {
@@ -116,13 +112,13 @@ public class UploadRecordSqlProvider {
         sql.SELECT("power_one");
         sql.SELECT("power_two");
         sql.SELECT("power_three");
-        sql.SELECT("power_four");
         sql.SELECT("temperature_one");
         sql.SELECT("temperature_two");
         sql.SELECT("temperature_three");
-        sql.SELECT("temperature_four");
         sql.SELECT("value_one");
         sql.SELECT("value_two");
+        sql.SELECT("value_three");
+        sql.SELECT("value_four");
         sql.SELECT("upload_date");
         sql.SELECT("cabinet_id");
         sql.FROM("upload_record");
@@ -164,10 +160,6 @@ public class UploadRecordSqlProvider {
             sql.SET("power_three = #{record.powerThree,jdbcType=INTEGER}");
         }
         
-        if (record.getPowerFour() != null) {
-            sql.SET("power_four = #{record.powerFour,jdbcType=INTEGER}");
-        }
-        
         if (record.getTemperatureOne() != null) {
             sql.SET("temperature_one = #{record.temperatureOne,jdbcType=DECIMAL}");
         }
@@ -180,16 +172,20 @@ public class UploadRecordSqlProvider {
             sql.SET("temperature_three = #{record.temperatureThree,jdbcType=DECIMAL}");
         }
         
-        if (record.getTemperatureFour() != null) {
-            sql.SET("temperature_four = #{record.temperatureFour,jdbcType=DECIMAL}");
-        }
-        
         if (record.getValueOne() != null) {
             sql.SET("value_one = #{record.valueOne,jdbcType=INTEGER}");
         }
         
         if (record.getValueTwo() != null) {
             sql.SET("value_two = #{record.valueTwo,jdbcType=INTEGER}");
+        }
+        
+        if (record.getValueThree() != null) {
+            sql.SET("value_three = #{record.valueThree,jdbcType=DECIMAL}");
+        }
+        
+        if (record.getValueFour() != null) {
+            sql.SET("value_four = #{record.valueFour,jdbcType=DECIMAL}");
         }
         
         if (record.getUploadDate() != null) {
@@ -218,13 +214,13 @@ public class UploadRecordSqlProvider {
         sql.SET("power_one = #{record.powerOne,jdbcType=INTEGER}");
         sql.SET("power_two = #{record.powerTwo,jdbcType=INTEGER}");
         sql.SET("power_three = #{record.powerThree,jdbcType=INTEGER}");
-        sql.SET("power_four = #{record.powerFour,jdbcType=INTEGER}");
         sql.SET("temperature_one = #{record.temperatureOne,jdbcType=DECIMAL}");
         sql.SET("temperature_two = #{record.temperatureTwo,jdbcType=DECIMAL}");
         sql.SET("temperature_three = #{record.temperatureThree,jdbcType=DECIMAL}");
-        sql.SET("temperature_four = #{record.temperatureFour,jdbcType=DECIMAL}");
         sql.SET("value_one = #{record.valueOne,jdbcType=INTEGER}");
         sql.SET("value_two = #{record.valueTwo,jdbcType=INTEGER}");
+        sql.SET("value_three = #{record.valueThree,jdbcType=DECIMAL}");
+        sql.SET("value_four = #{record.valueFour,jdbcType=DECIMAL}");
         sql.SET("upload_date = #{record.uploadDate,jdbcType=TIMESTAMP}");
         sql.SET("cabinet_id = #{record.cabinetId,jdbcType=VARCHAR}");
         
@@ -255,10 +251,6 @@ public class UploadRecordSqlProvider {
             sql.SET("power_three = #{powerThree,jdbcType=INTEGER}");
         }
         
-        if (record.getPowerFour() != null) {
-            sql.SET("power_four = #{powerFour,jdbcType=INTEGER}");
-        }
-        
         if (record.getTemperatureOne() != null) {
             sql.SET("temperature_one = #{temperatureOne,jdbcType=DECIMAL}");
         }
@@ -271,16 +263,20 @@ public class UploadRecordSqlProvider {
             sql.SET("temperature_three = #{temperatureThree,jdbcType=DECIMAL}");
         }
         
-        if (record.getTemperatureFour() != null) {
-            sql.SET("temperature_four = #{temperatureFour,jdbcType=DECIMAL}");
-        }
-        
         if (record.getValueOne() != null) {
             sql.SET("value_one = #{valueOne,jdbcType=INTEGER}");
         }
         
         if (record.getValueTwo() != null) {
             sql.SET("value_two = #{valueTwo,jdbcType=INTEGER}");
+        }
+        
+        if (record.getValueThree() != null) {
+            sql.SET("value_three = #{valueThree,jdbcType=DECIMAL}");
+        }
+        
+        if (record.getValueFour() != null) {
+            sql.SET("value_four = #{valueFour,jdbcType=DECIMAL}");
         }
         
         if (record.getUploadDate() != null) {

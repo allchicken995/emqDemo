@@ -12,7 +12,7 @@ import java.security.Security;
 public class DesUtils {
 
 	  /** 字符串默认键值     */
-	  private static String strDefaultKey = "Daikin@2017ivrv!";
+	  private static String strDefaultKey = "123456";
 
 	  /** 加密工具     */
 	  private Cipher encryptCipher;

@@ -13,7 +13,7 @@ import java.time.Duration;
 /**
  * RestTemplate配置类
  *
- * @author 黄祖珏
+ * @author zht
  * @date 2020-06-16 9:22
  */
 @Configuration

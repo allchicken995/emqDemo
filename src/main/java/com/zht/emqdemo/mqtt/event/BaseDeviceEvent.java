@@ -61,7 +61,7 @@ public abstract class BaseDeviceEvent implements DeviceEvent {
     }
 
     @Override
-    @Async("asyncEventExecutor")
+    @Async("asyncServiceExecutor")
     public void eventHandle(EventContext eventContext) {
 
         try {

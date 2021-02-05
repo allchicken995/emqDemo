@@ -46,17 +46,17 @@ public interface UploadRecordMapper {
      * @mbg.generated
      */
     @Insert({
-        "insert into upload_record (id, power_one, power_two, ",
-        "power_three, power_four, ",
-        "temperature_one, temperature_two, ",
-        "temperature_three, temperature_four, ",
+        "insert into upload_record (power_one, power_two, ",
+        "power_three, temperature_one, ",
+        "temperature_two, temperature_three, ",
         "value_one, value_two, ",
+        "value_three, value_four, ",
         "upload_date, cabinet_id)",
-        "values (#{id,jdbcType=VARCHAR}, #{powerOne,jdbcType=INTEGER}, #{powerTwo,jdbcType=INTEGER}, ",
-        "#{powerThree,jdbcType=INTEGER}, #{powerFour,jdbcType=INTEGER}, ",
-        "#{temperatureOne,jdbcType=DECIMAL}, #{temperatureTwo,jdbcType=DECIMAL}, ",
-        "#{temperatureThree,jdbcType=DECIMAL}, #{temperatureFour,jdbcType=DECIMAL}, ",
+        "values (#{powerOne,jdbcType=INTEGER}, #{powerTwo,jdbcType=INTEGER}, ",
+        "#{powerThree,jdbcType=INTEGER}, #{temperatureOne,jdbcType=DECIMAL}, ",
+        "#{temperatureTwo,jdbcType=DECIMAL}, #{temperatureThree,jdbcType=DECIMAL}, ",
         "#{valueOne,jdbcType=INTEGER}, #{valueTwo,jdbcType=INTEGER}, ",
+        "#{valueThree,jdbcType=DECIMAL}, #{valueFour,jdbcType=DECIMAL}, ",
         "#{uploadDate,jdbcType=TIMESTAMP}, #{cabinetId,jdbcType=VARCHAR})"
     })
     @Options(useGeneratedKeys=true,keyProperty="id")
@@ -84,13 +84,13 @@ public interface UploadRecordMapper {
         @Result(column="power_one", property="powerOne", jdbcType=JdbcType.INTEGER),
         @Result(column="power_two", property="powerTwo", jdbcType=JdbcType.INTEGER),
         @Result(column="power_three", property="powerThree", jdbcType=JdbcType.INTEGER),
-        @Result(column="power_four", property="powerFour", jdbcType=JdbcType.INTEGER),
         @Result(column="temperature_one", property="temperatureOne", jdbcType=JdbcType.DECIMAL),
         @Result(column="temperature_two", property="temperatureTwo", jdbcType=JdbcType.DECIMAL),
         @Result(column="temperature_three", property="temperatureThree", jdbcType=JdbcType.DECIMAL),
-        @Result(column="temperature_four", property="temperatureFour", jdbcType=JdbcType.DECIMAL),
         @Result(column="value_one", property="valueOne", jdbcType=JdbcType.INTEGER),
         @Result(column="value_two", property="valueTwo", jdbcType=JdbcType.INTEGER),
+        @Result(column="value_three", property="valueThree", jdbcType=JdbcType.DECIMAL),
+        @Result(column="value_four", property="valueFour", jdbcType=JdbcType.DECIMAL),
         @Result(column="upload_date", property="uploadDate", jdbcType=JdbcType.TIMESTAMP),
         @Result(column="cabinet_id", property="cabinetId", jdbcType=JdbcType.VARCHAR)
     })
@@ -104,8 +104,8 @@ public interface UploadRecordMapper {
      */
     @Select({
         "select",
-        "id, power_one, power_two, power_three, power_four, temperature_one, temperature_two, ",
-        "temperature_three, temperature_four, value_one, value_two, upload_date, cabinet_id",
+        "id, power_one, power_two, power_three, temperature_one, temperature_two, temperature_three, ",
+        "value_one, value_two, value_three, value_four, upload_date, cabinet_id",
         "from upload_record",
         "where id = #{id,jdbcType=VARCHAR}"
     })
@@ -114,13 +114,13 @@ public interface UploadRecordMapper {
         @Result(column="power_one", property="powerOne", jdbcType=JdbcType.INTEGER),
         @Result(column="power_two", property="powerTwo", jdbcType=JdbcType.INTEGER),
         @Result(column="power_three", property="powerThree", jdbcType=JdbcType.INTEGER),
-        @Result(column="power_four", property="powerFour", jdbcType=JdbcType.INTEGER),
         @Result(column="temperature_one", property="temperatureOne", jdbcType=JdbcType.DECIMAL),
         @Result(column="temperature_two", property="temperatureTwo", jdbcType=JdbcType.DECIMAL),
         @Result(column="temperature_three", property="temperatureThree", jdbcType=JdbcType.DECIMAL),
-        @Result(column="temperature_four", property="temperatureFour", jdbcType=JdbcType.DECIMAL),
         @Result(column="value_one", property="valueOne", jdbcType=JdbcType.INTEGER),
         @Result(column="value_two", property="valueTwo", jdbcType=JdbcType.INTEGER),
+        @Result(column="value_three", property="valueThree", jdbcType=JdbcType.DECIMAL),
+        @Result(column="value_four", property="valueFour", jdbcType=JdbcType.DECIMAL),
         @Result(column="upload_date", property="uploadDate", jdbcType=JdbcType.TIMESTAMP),
         @Result(column="cabinet_id", property="cabinetId", jdbcType=JdbcType.VARCHAR)
     })
@@ -164,13 +164,13 @@ public interface UploadRecordMapper {
         "set power_one = #{powerOne,jdbcType=INTEGER},",
           "power_two = #{powerTwo,jdbcType=INTEGER},",
           "power_three = #{powerThree,jdbcType=INTEGER},",
-          "power_four = #{powerFour,jdbcType=INTEGER},",
           "temperature_one = #{temperatureOne,jdbcType=DECIMAL},",
           "temperature_two = #{temperatureTwo,jdbcType=DECIMAL},",
           "temperature_three = #{temperatureThree,jdbcType=DECIMAL},",
-          "temperature_four = #{temperatureFour,jdbcType=DECIMAL},",
           "value_one = #{valueOne,jdbcType=INTEGER},",
           "value_two = #{valueTwo,jdbcType=INTEGER},",
+          "value_three = #{valueThree,jdbcType=DECIMAL},",
+          "value_four = #{valueFour,jdbcType=DECIMAL},",
           "upload_date = #{uploadDate,jdbcType=TIMESTAMP},",
           "cabinet_id = #{cabinetId,jdbcType=VARCHAR}",
         "where id = #{id,jdbcType=VARCHAR}"

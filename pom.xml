@@ -20,6 +20,7 @@
         <fastjson.version>1.2.56</fastjson.version>
         <mybatis.version>1.3.2</mybatis.version>
         <mqtt.version>1.2.2</mqtt.version>
+        <jwt.version>3.4.0</jwt.version>
         <hutool.version>5.4.7</hutool.version>
     </properties>
 
@@ -65,6 +66,13 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.35</version>
+        </dependency>
+
+        <!-- JWT -->
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>${jwt.version}</version>
         </dependency>
 
         <!-- mqtt -->
@@ -123,7 +131,7 @@
                     <!-- 打印生成步骤 -->
                     <verbose>true</verbose>
                     <!-- 是否覆盖 -->
-                    <overwrite>true</overwrite>
+                    <overwrite>false</overwrite>
                 </configuration>
             </plugin>
         </plugins>

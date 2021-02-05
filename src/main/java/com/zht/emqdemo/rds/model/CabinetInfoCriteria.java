@@ -505,66 +505,6 @@ public class CabinetInfoCriteria {
             return (Criteria) this;
         }
 
-        public Criteria andPowerFourIsNull() {
-            addCriterion("power_four is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andPowerFourIsNotNull() {
-            addCriterion("power_four is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andPowerFourEqualTo(Integer value) {
-            addCriterion("power_four =", value, "powerFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andPowerFourNotEqualTo(Integer value) {
-            addCriterion("power_four <>", value, "powerFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andPowerFourGreaterThan(Integer value) {
-            addCriterion("power_four >", value, "powerFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andPowerFourGreaterThanOrEqualTo(Integer value) {
-            addCriterion("power_four >=", value, "powerFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andPowerFourLessThan(Integer value) {
-            addCriterion("power_four <", value, "powerFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andPowerFourLessThanOrEqualTo(Integer value) {
-            addCriterion("power_four <=", value, "powerFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andPowerFourIn(List<Integer> values) {
-            addCriterion("power_four in", values, "powerFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andPowerFourNotIn(List<Integer> values) {
-            addCriterion("power_four not in", values, "powerFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andPowerFourBetween(Integer value1, Integer value2) {
-            addCriterion("power_four between", value1, value2, "powerFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andPowerFourNotBetween(Integer value1, Integer value2) {
-            addCriterion("power_four not between", value1, value2, "powerFour");
-            return (Criteria) this;
-        }
-
         public Criteria andTemperatureOneIsNull() {
             addCriterion("temperature_one is null");
             return (Criteria) this;
@@ -745,66 +685,6 @@ public class CabinetInfoCriteria {
             return (Criteria) this;
         }
 
-        public Criteria andTemperatureFourIsNull() {
-            addCriterion("temperature_four is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andTemperatureFourIsNotNull() {
-            addCriterion("temperature_four is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andTemperatureFourEqualTo(BigDecimal value) {
-            addCriterion("temperature_four =", value, "temperatureFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andTemperatureFourNotEqualTo(BigDecimal value) {
-            addCriterion("temperature_four <>", value, "temperatureFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andTemperatureFourGreaterThan(BigDecimal value) {
-            addCriterion("temperature_four >", value, "temperatureFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andTemperatureFourGreaterThanOrEqualTo(BigDecimal value) {
-            addCriterion("temperature_four >=", value, "temperatureFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andTemperatureFourLessThan(BigDecimal value) {
-            addCriterion("temperature_four <", value, "temperatureFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andTemperatureFourLessThanOrEqualTo(BigDecimal value) {
-            addCriterion("temperature_four <=", value, "temperatureFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andTemperatureFourIn(List<BigDecimal> values) {
-            addCriterion("temperature_four in", values, "temperatureFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andTemperatureFourNotIn(List<BigDecimal> values) {
-            addCriterion("temperature_four not in", values, "temperatureFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andTemperatureFourBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("temperature_four between", value1, value2, "temperatureFour");
-            return (Criteria) this;
-        }
-
-        public Criteria andTemperatureFourNotBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("temperature_four not between", value1, value2, "temperatureFour");
-            return (Criteria) this;
-        }
-
         public Criteria andValueOneIsNull() {
             addCriterion("value_one is null");
             return (Criteria) this;
@@ -922,6 +802,266 @@ public class CabinetInfoCriteria {
 
         public Criteria andValueTwoNotBetween(Integer value1, Integer value2) {
             addCriterion("value_two not between", value1, value2, "valueTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueThreeIsNull() {
+            addCriterion("value_three is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueThreeIsNotNull() {
+            addCriterion("value_three is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueThreeEqualTo(BigDecimal value) {
+            addCriterion("value_three =", value, "valueThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueThreeNotEqualTo(BigDecimal value) {
+            addCriterion("value_three <>", value, "valueThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueThreeGreaterThan(BigDecimal value) {
+            addCriterion("value_three >", value, "valueThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueThreeGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("value_three >=", value, "valueThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueThreeLessThan(BigDecimal value) {
+            addCriterion("value_three <", value, "valueThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueThreeLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("value_three <=", value, "valueThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueThreeIn(List<BigDecimal> values) {
+            addCriterion("value_three in", values, "valueThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueThreeNotIn(List<BigDecimal> values) {
+            addCriterion("value_three not in", values, "valueThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueThreeBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("value_three between", value1, value2, "valueThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueThreeNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("value_three not between", value1, value2, "valueThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueFourIsNull() {
+            addCriterion("value_four is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueFourIsNotNull() {
+            addCriterion("value_four is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueFourEqualTo(BigDecimal value) {
+            addCriterion("value_four =", value, "valueFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueFourNotEqualTo(BigDecimal value) {
+            addCriterion("value_four <>", value, "valueFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueFourGreaterThan(BigDecimal value) {
+            addCriterion("value_four >", value, "valueFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueFourGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("value_four >=", value, "valueFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueFourLessThan(BigDecimal value) {
+            addCriterion("value_four <", value, "valueFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueFourLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("value_four <=", value, "valueFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueFourIn(List<BigDecimal> values) {
+            addCriterion("value_four in", values, "valueFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueFourNotIn(List<BigDecimal> values) {
+            addCriterion("value_four not in", values, "valueFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueFourBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("value_four between", value1, value2, "valueFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andValueFourNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("value_four not between", value1, value2, "valueFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeviceNameIsNull() {
+            addCriterion("device_name is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeviceNameIsNotNull() {
+            addCriterion("device_name is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeviceNameEqualTo(String value) {
+            addCriterion("device_name =", value, "deviceName");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeviceNameNotEqualTo(String value) {
+            addCriterion("device_name <>", value, "deviceName");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeviceNameGreaterThan(String value) {
+            addCriterion("device_name >", value, "deviceName");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeviceNameGreaterThanOrEqualTo(String value) {
+            addCriterion("device_name >=", value, "deviceName");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeviceNameLessThan(String value) {
+            addCriterion("device_name <", value, "deviceName");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeviceNameLessThanOrEqualTo(String value) {
+            addCriterion("device_name <=", value, "deviceName");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeviceNameLike(String value) {
+            addCriterion("device_name like", value, "deviceName");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeviceNameNotLike(String value) {
+            addCriterion("device_name not like", value, "deviceName");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeviceNameIn(List<String> values) {
+            addCriterion("device_name in", values, "deviceName");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeviceNameNotIn(List<String> values) {
+            addCriterion("device_name not in", values, "deviceName");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeviceNameBetween(String value1, String value2) {
+            addCriterion("device_name between", value1, value2, "deviceName");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeviceNameNotBetween(String value1, String value2) {
+            addCriterion("device_name not between", value1, value2, "deviceName");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeviceKeyIsNull() {
+            addCriterion("device_key is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeviceKeyIsNotNull() {
+            addCriterion("device_key is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeviceKeyEqualTo(String value) {
+            addCriterion("device_key =", value, "deviceKey");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeviceKeyNotEqualTo(String value) {
+            addCriterion("device_key <>", value, "deviceKey");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeviceKeyGreaterThan(String value) {
+            addCriterion("device_key >", value, "deviceKey");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeviceKeyGreaterThanOrEqualTo(String value) {
+            addCriterion("device_key >=", value, "deviceKey");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeviceKeyLessThan(String value) {
+            addCriterion("device_key <", value, "deviceKey");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeviceKeyLessThanOrEqualTo(String value) {
+            addCriterion("device_key <=", value, "deviceKey");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeviceKeyLike(String value) {
+            addCriterion("device_key like", value, "deviceKey");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeviceKeyNotLike(String value) {
+            addCriterion("device_key not like", value, "deviceKey");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeviceKeyIn(List<String> values) {
+            addCriterion("device_key in", values, "deviceKey");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeviceKeyNotIn(List<String> values) {
+            addCriterion("device_key not in", values, "deviceKey");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeviceKeyBetween(String value1, String value2) {
+            addCriterion("device_key between", value1, value2, "deviceKey");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeviceKeyNotBetween(String value1, String value2) {
+            addCriterion("device_key not between", value1, value2, "deviceKey");
             return (Criteria) this;
         }
 

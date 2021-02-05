@@ -44,11 +44,7 @@ public class CabinetInfoSqlProvider {
     public String insertSelective(CabinetInfo record) {
         SQL sql = new SQL();
         sql.INSERT_INTO("cabinet_info");
-
-        if (record.getId() != null) {
-            sql.VALUES("id", "#{id,jdbcType=VARCHAR}");
-        }
-
+        
         if (record.getStatus() != null) {
             sql.VALUES("status", "#{status,jdbcType=INTEGER}");
         }
@@ -65,10 +61,6 @@ public class CabinetInfoSqlProvider {
             sql.VALUES("power_three", "#{powerThree,jdbcType=INTEGER}");
         }
         
-        if (record.getPowerFour() != null) {
-            sql.VALUES("power_four", "#{powerFour,jdbcType=INTEGER}");
-        }
-        
         if (record.getTemperatureOne() != null) {
             sql.VALUES("temperature_one", "#{temperatureOne,jdbcType=DECIMAL}");
         }
@@ -81,16 +73,28 @@ public class CabinetInfoSqlProvider {
             sql.VALUES("temperature_three", "#{temperatureThree,jdbcType=DECIMAL}");
         }
         
-        if (record.getTemperatureFour() != null) {
-            sql.VALUES("temperature_four", "#{temperatureFour,jdbcType=DECIMAL}");
-        }
-        
         if (record.getValueOne() != null) {
             sql.VALUES("value_one", "#{valueOne,jdbcType=INTEGER}");
         }
         
         if (record.getValueTwo() != null) {
             sql.VALUES("value_two", "#{valueTwo,jdbcType=INTEGER}");
+        }
+        
+        if (record.getValueThree() != null) {
+            sql.VALUES("value_three", "#{valueThree,jdbcType=DECIMAL}");
+        }
+        
+        if (record.getValueFour() != null) {
+            sql.VALUES("value_four", "#{valueFour,jdbcType=DECIMAL}");
+        }
+        
+        if (record.getDeviceName() != null) {
+            sql.VALUES("device_name", "#{deviceName,jdbcType=VARCHAR}");
+        }
+        
+        if (record.getDeviceKey() != null) {
+            sql.VALUES("device_key", "#{deviceKey,jdbcType=VARCHAR}");
         }
         
         if (record.getTenantId() != null) {
@@ -125,13 +129,15 @@ public class CabinetInfoSqlProvider {
         sql.SELECT("power_one");
         sql.SELECT("power_two");
         sql.SELECT("power_three");
-        sql.SELECT("power_four");
         sql.SELECT("temperature_one");
         sql.SELECT("temperature_two");
         sql.SELECT("temperature_three");
-        sql.SELECT("temperature_four");
         sql.SELECT("value_one");
         sql.SELECT("value_two");
+        sql.SELECT("value_three");
+        sql.SELECT("value_four");
+        sql.SELECT("device_name");
+        sql.SELECT("device_key");
         sql.SELECT("tenant_id");
         sql.SELECT("alarm_value_one");
         sql.SELECT("alarm_value_two");
@@ -178,10 +184,6 @@ public class CabinetInfoSqlProvider {
             sql.SET("power_three = #{record.powerThree,jdbcType=INTEGER}");
         }
         
-        if (record.getPowerFour() != null) {
-            sql.SET("power_four = #{record.powerFour,jdbcType=INTEGER}");
-        }
-        
         if (record.getTemperatureOne() != null) {
             sql.SET("temperature_one = #{record.temperatureOne,jdbcType=DECIMAL}");
         }
@@ -194,16 +196,28 @@ public class CabinetInfoSqlProvider {
             sql.SET("temperature_three = #{record.temperatureThree,jdbcType=DECIMAL}");
         }
         
-        if (record.getTemperatureFour() != null) {
-            sql.SET("temperature_four = #{record.temperatureFour,jdbcType=DECIMAL}");
-        }
-        
         if (record.getValueOne() != null) {
             sql.SET("value_one = #{record.valueOne,jdbcType=INTEGER}");
         }
         
         if (record.getValueTwo() != null) {
             sql.SET("value_two = #{record.valueTwo,jdbcType=INTEGER}");
+        }
+        
+        if (record.getValueThree() != null) {
+            sql.SET("value_three = #{record.valueThree,jdbcType=DECIMAL}");
+        }
+        
+        if (record.getValueFour() != null) {
+            sql.SET("value_four = #{record.valueFour,jdbcType=DECIMAL}");
+        }
+        
+        if (record.getDeviceName() != null) {
+            sql.SET("device_name = #{record.deviceName,jdbcType=VARCHAR}");
+        }
+        
+        if (record.getDeviceKey() != null) {
+            sql.SET("device_key = #{record.deviceKey,jdbcType=VARCHAR}");
         }
         
         if (record.getTenantId() != null) {
@@ -237,13 +251,15 @@ public class CabinetInfoSqlProvider {
         sql.SET("power_one = #{record.powerOne,jdbcType=INTEGER}");
         sql.SET("power_two = #{record.powerTwo,jdbcType=INTEGER}");
         sql.SET("power_three = #{record.powerThree,jdbcType=INTEGER}");
-        sql.SET("power_four = #{record.powerFour,jdbcType=INTEGER}");
         sql.SET("temperature_one = #{record.temperatureOne,jdbcType=DECIMAL}");
         sql.SET("temperature_two = #{record.temperatureTwo,jdbcType=DECIMAL}");
         sql.SET("temperature_three = #{record.temperatureThree,jdbcType=DECIMAL}");
-        sql.SET("temperature_four = #{record.temperatureFour,jdbcType=DECIMAL}");
         sql.SET("value_one = #{record.valueOne,jdbcType=INTEGER}");
         sql.SET("value_two = #{record.valueTwo,jdbcType=INTEGER}");
+        sql.SET("value_three = #{record.valueThree,jdbcType=DECIMAL}");
+        sql.SET("value_four = #{record.valueFour,jdbcType=DECIMAL}");
+        sql.SET("device_name = #{record.deviceName,jdbcType=VARCHAR}");
+        sql.SET("device_key = #{record.deviceKey,jdbcType=VARCHAR}");
         sql.SET("tenant_id = #{record.tenantId,jdbcType=VARCHAR}");
         sql.SET("alarm_value_one = #{record.alarmValueOne,jdbcType=INTEGER}");
         sql.SET("alarm_value_two = #{record.alarmValueTwo,jdbcType=INTEGER}");
@@ -279,10 +295,6 @@ public class CabinetInfoSqlProvider {
             sql.SET("power_three = #{powerThree,jdbcType=INTEGER}");
         }
         
-        if (record.getPowerFour() != null) {
-            sql.SET("power_four = #{powerFour,jdbcType=INTEGER}");
-        }
-        
         if (record.getTemperatureOne() != null) {
             sql.SET("temperature_one = #{temperatureOne,jdbcType=DECIMAL}");
         }
@@ -295,16 +307,28 @@ public class CabinetInfoSqlProvider {
             sql.SET("temperature_three = #{temperatureThree,jdbcType=DECIMAL}");
         }
         
-        if (record.getTemperatureFour() != null) {
-            sql.SET("temperature_four = #{temperatureFour,jdbcType=DECIMAL}");
-        }
-        
         if (record.getValueOne() != null) {
             sql.SET("value_one = #{valueOne,jdbcType=INTEGER}");
         }
         
         if (record.getValueTwo() != null) {
             sql.SET("value_two = #{valueTwo,jdbcType=INTEGER}");
+        }
+        
+        if (record.getValueThree() != null) {
+            sql.SET("value_three = #{valueThree,jdbcType=DECIMAL}");
+        }
+        
+        if (record.getValueFour() != null) {
+            sql.SET("value_four = #{valueFour,jdbcType=DECIMAL}");
+        }
+        
+        if (record.getDeviceName() != null) {
+            sql.SET("device_name = #{deviceName,jdbcType=VARCHAR}");
+        }
+        
+        if (record.getDeviceKey() != null) {
+            sql.SET("device_key = #{deviceKey,jdbcType=VARCHAR}");
         }
         
         if (record.getTenantId() != null) {

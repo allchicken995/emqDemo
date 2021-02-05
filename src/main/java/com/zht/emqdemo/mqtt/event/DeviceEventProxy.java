@@ -37,21 +37,6 @@ public class DeviceEventProxy {
         }
     }
 
-    /**
-     * 代理子事件业务逻辑执行
-     * 执行整个事件流程，参数校验，业务处理，事项响应
-     *
-     * @param eventContext 上下文
-     */
-    public void doEvent(EventContext eventContext) {
-        DeviceEvent event = getEvent(eventContext);
-        if (event != null) {
-            event.doEvent(eventContext);
-        } else {
-            throw new RuntimeException("匹配子事件处理器失败: topic=" + eventContext.getTopic());
-        }
-    }
-
     private DeviceEvent getEvent(EventContext eventContext) {
         for (DeviceEvent event : events) {
             if (event.match(eventContext)) {

@@ -44,10 +44,6 @@ public class TenantInfoSqlProvider {
     public String insertSelective(TenantInfo record) {
         SQL sql = new SQL();
         sql.INSERT_INTO("tenant_info");
-
-        if (record.getId() != null) {
-            sql.VALUES("id", "#{id,jdbcType=VARCHAR}");
-        }
         
         if (record.getAccount() != null) {
             sql.VALUES("account", "#{account,jdbcType=VARCHAR}");

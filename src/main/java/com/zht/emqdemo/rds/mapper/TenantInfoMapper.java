@@ -46,8 +46,8 @@ public interface TenantInfoMapper {
      * @mbg.generated
      */
     @Insert({
-        "insert into tenant_info (id, account, password)",
-        "values (#{id,jdbcType=VARCHAR}, #{account,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR})"
+        "insert into tenant_info (account, password)",
+        "values (#{account,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR})"
     })
     @Options(useGeneratedKeys=true,keyProperty="id")
     int insert(TenantInfo record);

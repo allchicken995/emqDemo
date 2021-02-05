@@ -121,8 +121,8 @@ public class DeviceMqttConfig {
         try {
             client.connect(connOpts);
             for (BaseDeviceReceiver receiver : receivers) {
-                client.subscribe(receiver.getTopicFilter() , receiver.getQos(), receiver);
-                LOGGER.info("订阅主题成功：topic=" + receiver.getTopicFilter()+ " ,Qos=" + receiver.getQos());
+                client.subscribe(receiver.getTopicFilter(), receiver.getQos(), receiver);
+                LOGGER.info("订阅主题成功：topic=" + receiver.getTopicFilter() + " ,Qos=" + receiver.getQos());
             }
         } catch (MqttException ex) {
             // MQTT连接

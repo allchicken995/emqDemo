@@ -22,7 +22,7 @@ public class SubscribeTopic {
      * 设备---->服务器
      * 共享订阅
      */
-    public final static String DEVICE_SERVICE_RESPONSE = "+/common/service_response/+";
+    //public final static String DEVICE_SERVICE_RESPONSE = "+/common/service_response/+";
 
     /**
      * 设备主动上报
