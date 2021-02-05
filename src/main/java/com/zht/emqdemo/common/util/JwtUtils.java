@@ -12,6 +12,8 @@ import java.util.Map;
 
 /**
  * jwt工具类
+ *
+ * 用于设备和app获取连接emq使用的jwt
  */
 @Configuration
 public class JwtUtils {
